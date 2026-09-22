@@ -3,7 +3,7 @@ import random
 
 print("Welcome to the Reaction Time Game!")
 print("When you see 'GO!', press Enter as fast as you can.")
-input("Press Enter to begin...\n")
+input("Press Enter to begin...")
 
 attempts = 5
 reaction_times = []
@@ -24,15 +24,15 @@ for i in range(attempts):
     # Wait for the player to press Enter
     input()
 
-    # Record the time when the player presses Enter
+    # record the time when the player presses Enter
     end_time = time.monotonic()
 
-    # Calculate and display the player's reaction time
+    # this was to calculate and display the player's reaction time
     reaction_time = end_time - start_time
     reaction_times.append(reaction_time)
-    print(f"Your reaction time was: {reaction_time:.3f} seconds\n")
+    print(f"Your reaction time was: {reaction_time} seconds")
 
 # After all 5 attempts, display the player's fastest reaction time
 fastest_time = min(reaction_times)
-print("===================================")
-print(f"Game Over! Your fastest reaction time was {fastest_time:.3f} seconds.")
+print("--------------------")
+print(f"Game Over! Your fastest reaction time was {fastest_time} seconds.")
